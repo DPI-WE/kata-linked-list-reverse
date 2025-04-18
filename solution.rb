@@ -10,7 +10,7 @@ class ListNode
     # TODO
   end
 
-  def ListNode.to_array(list)
+  def ListNode.to_a(list)
     array = []
     while list
         array << list.val
@@ -19,7 +19,7 @@ class ListNode
     array
   end
 
-  def ListNode.to_list(array)
+  def ListNode.to_l(array)
     return nil if array.empty?
 
     head = ListNode.new(array.first)
