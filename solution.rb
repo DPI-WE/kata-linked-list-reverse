@@ -10,11 +10,11 @@ class ListNode
     # TODO
   end
 
-  def ListNode.to_a(list)
+  def ListNode.to_a(node)
     array = []
-    while list
-        array << list.value
-        list = list.next
+    while node
+        array << node.value
+        node = node.next
     end
     array
   end
