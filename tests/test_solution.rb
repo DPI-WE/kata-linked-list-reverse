@@ -14,6 +14,13 @@ class TestSolution < Minitest::Test
     assert_equal([6, 5, 4, 3, 2, 1], ListNode.to_a(reversed_list_head))
   end
 
+  def test_reverse_long
+    array = (0..100).to_a
+    list = ListNode.to_l(array)
+    reversed_list_head = ListNode.reverse(list)
+    assert_equal(array.reverse, ListNode.to_a(reversed_list_head))
+  end
+
   def test_reverse_empty_list
     reversed_list_head = ListNode.reverse(nil)
     assert_nil reversed_list_head
