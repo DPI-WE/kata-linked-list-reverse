@@ -13,9 +13,10 @@ class ListNode
   def ListNode.to_a(node)
     array = []
     while node
-        array << node.value
-        node = node.next
+      array << node.value
+      node = node.next
     end
+
     array
   end
 
@@ -25,9 +26,10 @@ class ListNode
     head = ListNode.new(array.first)
     current = head
     array[1..].each do |value|
-        current.next = ListNode.new(value)
-        current = current.next
+      current.next = ListNode.new(value)
+      current = current.next
     end
+
     head
   end
 end
