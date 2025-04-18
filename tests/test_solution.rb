@@ -25,7 +25,28 @@ class TestSolution < Minitest::Test
     assert_equal([1], ListNode.to_a(reversed_list_head))
   end
 
-  # TODO: test to_a and to_l methods
+  def test_to_a_0_1_2_3
+    head = ListNode.new(0)
+    head.next = ListNode.new(1)
+    head.next.next = ListNode.new(2)
+    head.next.next.next = ListNode.new(3)
+    assert_equal([0, 1, 2, 3], ListNode.to_a(head))
+  end
 
-  def test_to_a
+  def test_to_a_nil
+    assert_equal([], ListNode.to_a(nil))
+  end
+
+  def test_to_l_0_1_2_3
+    array = [0, 1, 2, 3]
+    head = ListNode.to_l(array)
+    array.each do |value|
+      assert_equal(value, head.value)
+      head = head.next
+    end
+  end
+
+  def test_to_l_empty
+    assert_nil ListNode.to_l([])
+  end
 end

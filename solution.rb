@@ -1,8 +1,8 @@
 class ListNode
-  attr_accessor :val, :next
+  attr_accessor :value, :next
 
-  def initialize(val = 0, _next = nil)
-    @val = val
+  def initialize(value = 0, _next = nil)
+    @value = value
     @next = _next
   end
 
@@ -13,7 +13,7 @@ class ListNode
   def ListNode.to_a(list)
     array = []
     while list
-        array << list.val
+        array << list.value
         list = list.next
     end
     array
