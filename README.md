@@ -1,6 +1,6 @@
 # Reverse a Linked List
 
-Write a program that:
+Write a method that:
 
 - takes the head of a singly linked list
 - reverses the list
